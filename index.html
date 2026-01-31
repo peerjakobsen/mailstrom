@@ -85,7 +85,7 @@
           <a href="#how-it-works" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0F172A] rounded px-1">How It Works</a>
           <a href="#features" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0F172A] rounded px-1">Features</a>
           <a href="#privacy" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0F172A] rounded px-1">Privacy</a>
-          <a href="#download" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0F172A] rounded px-1">Download</a>
+          <a href="#download" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0F172A] rounded px-1">Install</a>
         </div>
 
         <!-- Mobile hamburger -->
@@ -105,7 +105,7 @@
           <a href="#how-it-works" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-1">How It Works</a>
           <a href="#features" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-1">Features</a>
           <a href="#privacy" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-1">Privacy</a>
-          <a href="#download" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-1">Download</a>
+          <a href="#download" class="text-sm text-[#94A3B8] hover:text-[#F8FAFC] transition-colors py-1 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-1">Install</a>
         </div>
       </div>
     </div>
@@ -311,7 +311,67 @@
           Download for macOS
         </a>
 
-        <p class="text-sm text-[#94A3B8]">Free &middot; macOS &middot; v0.1.0</p>
+        <p class="text-sm text-[#94A3B8] mb-12">Free &middot; macOS &middot; v0.1.0</p>
+
+        <!-- Installation Guide -->
+        <div class="max-w-2xl mx-auto text-left">
+          <div class="border border-[#334155] bg-[#1E293B]/30 rounded-xl p-6 md:p-8">
+            <div class="flex items-start gap-3 mb-6">
+              <svg class="w-5 h-5 text-yellow-500/70 mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <div>
+                <p class="font-mono font-bold text-base text-[#CBD5E1] mb-1">Installation requires a quick Terminal step</p>
+                <p class="text-sm text-[#94A3B8] leading-relaxed">Mailstrom is free and open-source but not signed with an Apple Developer certificate. macOS will block unsigned apps by default, so you need to remove the quarantine flag after installing. This is a one-time step.</p>
+              </div>
+            </div>
+
+            <ol class="space-y-5">
+              <!-- Step 1 -->
+              <li class="flex gap-4">
+                <span class="shrink-0 inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-500/10 text-blue-400 font-mono text-sm font-bold">1</span>
+                <div class="min-w-0">
+                  <p class="text-sm text-[#F8FAFC] font-medium mb-1">Open the DMG and drag Mailstrom to Applications</p>
+                  <p class="text-sm text-[#94A3B8]">Double-click the downloaded <code class="font-mono text-blue-400/80 bg-blue-500/10 px-1.5 py-0.5 rounded text-xs">Mailstrom.dmg</code> file and drag the app icon into your Applications folder.</p>
+                </div>
+              </li>
+
+              <!-- Step 2 -->
+              <li class="flex gap-4">
+                <span class="shrink-0 inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-500/10 text-blue-400 font-mono text-sm font-bold">2</span>
+                <div class="min-w-0">
+                  <p class="text-sm text-[#F8FAFC] font-medium mb-1">Remove the quarantine flag via Terminal</p>
+                  <p class="text-sm text-[#94A3B8] mb-2">Open <strong class="text-[#CBD5E1]">Terminal</strong> (search for it in Spotlight with <kbd class="font-mono text-xs bg-[#334155] px-1.5 py-0.5 rounded border border-[#475569]">&#8984; Space</kbd>) and paste this command:</p>
+                  <div class="relative group">
+                    <pre class="font-mono text-sm bg-[#0F172A] border border-[#334155] rounded-lg px-4 py-3 text-blue-400 overflow-x-auto"><code>xattr -cr /Applications/mailstrom.app</code></pre>
+                    <button
+                      onclick="navigator.clipboard.writeText('xattr -cr /Applications/mailstrom.app');var t=this.querySelector('span');t.textContent='Copied!';setTimeout(function(){t.textContent='Copy'},1500)"
+                      class="absolute top-2 right-2 inline-flex items-center gap-1 px-2 py-1 text-xs text-[#94A3B8] hover:text-[#F8FAFC] bg-[#1E293B] border border-[#334155] rounded cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      aria-label="Copy command to clipboard"
+                    >
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                      <span>Copy</span>
+                    </button>
+                  </div>
+                  <p class="text-xs text-[#94A3B8] mt-2">This tells macOS it's safe to open the app. You only need to do this once.</p>
+                </div>
+              </li>
+
+              <!-- Step 3 -->
+              <li class="flex gap-4">
+                <span class="shrink-0 inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-500/10 text-blue-400 font-mono text-sm font-bold">3</span>
+                <div class="min-w-0">
+                  <p class="text-sm text-[#F8FAFC] font-medium mb-1">Open Mailstrom from Applications</p>
+                  <p class="text-sm text-[#94A3B8]">Launch the app normally. If macOS still shows a warning, right-click the app and choose <strong class="text-[#CBD5E1]">Open</strong> instead of double-clicking.</p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="mt-6 pt-5 border-t border-[#334155]">
+              <p class="text-xs text-[#94A3B8] leading-relaxed">
+                <strong class="text-[#CBD5E1]">Why is this needed?</strong> Apple requires developers to pay $99/year for a signing certificate. Mailstrom is a free, open-source project, so we skip that cost and pass the savings to you. The app is <a href="https://github.com/peerjakobsen/mailstrom-app" class="text-blue-400 hover:text-blue-300 underline underline-offset-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded" target="_blank" rel="noopener noreferrer">fully open-source</a> — you can inspect every line of code.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
